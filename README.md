@@ -10,6 +10,11 @@ Install [robust_speech](https://github.com/RaphaelOlivier/robust_speech) and [wh
 
 To use the HF inference pipeline you'll need `transformers>=4.23.0`, `datasets>=2.5.0` and `evaluate>=0.2.2`.
 
+The project has been updated to work with PyTorch 2.1.0+. You can install all required dependencies with:
+```
+pip install -r requirements.txt
+```
+
 ## Usage
 
 ## Generate adversarial examples

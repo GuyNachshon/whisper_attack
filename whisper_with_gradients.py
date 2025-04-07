@@ -1,5 +1,6 @@
 from whisper.model import Whisper
 import os
+import io
 from loss import get_loss_single_segment as get_loss_function
 from typing import Dict, List, Tuple, Iterable, Optional, Sequence, Union, TYPE_CHECKING
 import torch
@@ -113,5 +114,5 @@ def load_model_with_gradients(name: str, device: Optional[Union[str, torch.devic
 
 class WhisperWrapper(torch.nn.Module):
     def __init__(self, name: str, **kwargs):
-        super(WhisperWrapper,self).__init__()
+        super().__init__()
         self.model = load_model_with_gradients(name,**kwargs)
